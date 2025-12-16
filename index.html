@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rhodes Island | 罗德岛 - Arknights Fan Site</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div id="loader">
+      <div class="loader-content">
+        <div class="rhodes-logo-outline"></div>
+        <div class="loading-text">
+          <span class="blink">NEURAL_NETWORK_CONNECTING...</span>
+          <div class="progress-bar"><div class="fill"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <div class="logo-icon"></div>
+          <div class="logo-text">
+            <h1>RHODES ISLAND</h1>
+            <span>罗德岛</span>
+          </div>
+        </div>
+        <ul class="menu">
+          <li class="active"><a href="#" data-text="HOME">首页 // HOME</a></li>
+          <li><a href="#" data-text="NEWS">情报 // NEWS</a></li>
+          <li><a href="#" data-text="OPERATORS">干员 // OPERATORS</a></li>
+          <li><a href="#" data-text="WORLD">世界观 // WORLD</a></li>
+        </ul>
+        <div class="login-btn">
+          <span>LOGIN</span>
+          <div class="deco-corner"></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="hero-content">
+          <div class="decoration-line"></div>
+          <h2 class="glitch" data-text="PRTS_SYSTEM_ONLINE">
+            PRTS_SYSTEM_ONLINE
+          </h2>
+          <h1>欢迎归来，博士。</h1>
+          <p class="subtitle">Welcome back, Doctor.</p>
+          <div class="cta-group">
+            <button class="btn-primary">
+              <span class="btn-text">开始任务 / START MISSION</span>
+              <span class="btn-bg"></span>
+            </button>
+            <button class="btn-secondary">
+              <span class="btn-text">日程查看 / SCHEDULE</span>
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <!-- Abstract geometric representation of an operator -->
+          <div class="hex-grid"></div>
+        </div>
+      </header>
+
+      <!-- News Section -->
+      <section class="news-ticker">
+        <div class="section-header">
+          <h3>LATEST NEWS</h3>
+          <div class="line"></div>
+          <span>01</span>
+        </div>
+        <div class="news-grid">
+          <article class="news-item">
+            <div class="date">2025.12.16</div>
+            <div class="tag">SYSTEM</div>
+            <div class="title">系统维护公告 / Maintenance Notice</div>
+          </article>
+          <article class="news-item">
+            <div class="date">2025.12.15</div>
+            <div class="tag">EVENT</div>
+            <div class="title">新剿灭作战即将开启 / New Annihilation</div>
+          </article>
+          <article class="news-item">
+            <div class="date">2025.12.12</div>
+            <div class="tag">OUTFIT</div>
+            <div class="title">【0011】系列新款上架 / New Arrivals</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Featured Operator -->
+      <section class="operator-spotlight">
+        <div class="section-header">
+          <h3>OPERATOR FILES</h3>
+          <div class="line"></div>
+          <span>02</span>
+        </div>
+        <div class="operator-card">
+          <div class="card-bg"></div>
+          <div class="card-info">
+            <h4>AMIYA</h4>
+            <span class="class-icon">CASTER</span>
+            <p>罗德岛的公开领袖，在内部拥有最高执行权。</p>
+            <div class="stats">
+              <div class="stat-row">
+                <span>HP</span>
+                <div class="bar" style="width: 60%"></div>
+              </div>
+              <div class="stat-row">
+                <span>ATK</span>
+                <div class="bar" style="width: 80%"></div>
+              </div>
+              <div class="stat-row">
+                <span>DEF</span>
+                <div class="bar" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">RHODES ISLAND PHARMACEUTICAL INC.</div>
+        <div class="copyright">
+          <p>&copy; 2025 Arknights Fan Project. Not Official.</p>
+          <p>Material Design / Minimalist UI Experiment</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
