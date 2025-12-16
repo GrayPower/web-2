@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhodes Island | World View - 泰拉世界观</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific styles for world.html */
+        .world-detail-header {
+            padding: 150px 10% 50px;
+            background: linear-gradient(180deg, rgba(18,18,18,0.9) 0%, rgba(18,18,18,0.6) 100%);
+            text-align: center;
+        }
+
+        .world-detail-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 5px;
+        }
+
+        .world-detail-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-dim);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .world-content {
+            padding: 50px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .detail-section {
+            margin-bottom: 100px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .detail-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .detail-text {
+            flex: 1;
+        }
+
+        .detail-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+            position: relative;
+            display: inline-block;
+        }
+
+        .detail-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--color-text);
+        }
+
+        .detail-text p {
+            color: var(--color-text-dim);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .detail-visual {
+            flex: 1;
+            height: 300px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        /* Abstract Visuals using CSS shapes */
+        .visual-terra::before {
+            content: '';
+            width: 150px;
+            height: 150px;
+            border: 2px solid var(--color-text-dim);
+            transform: rotate(45deg);
+        }
+        
+        .visual-originium::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+            border-bottom: 120px solid #000;
+            position: relative;
+            z-index: 2;
+        }
+        .visual-originium::after {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            background: var(--color-primary);
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            animation: pulse 2s infinite;
+        }
+
+        .visual-catastrophe {
+            background: repeating-linear-gradient(45deg, #1a1a1a, #1a1a1a 10px, #222 10px, #222 20px);
+        }
+        
+        .visual-cities {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+        .city-block {
+            width: 40px;
+            background: var(--color-text-dim);
+            transition: height 0.5s;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        @media (max-width: 768px) {
+            .detail-section, .detail-section:nth-child(even) {
+                flex-direction: column;
+            }
+            .world-detail-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>RHODES ISLAND</h1>
+                    <span>罗德岛</span>
+                </div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html#home" data-text="HOME">首页 // HOME</a></li>
+                <li><a href="index.html#news" data-text="NEWS">情报 // NEWS</a></li>
+                <li><a href="index.html#operators" data-text="OPERATORS">干员 // OPERATORS</a></li>
+                <li class="active"><a href="world.html" data-text="WORLD">世界观 // WORLD</a></li>
+            </ul>
+            <div class="login-btn">
+                <span>LOGIN</span>
+                <div class="deco-corner"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="world-detail-header">
+        <h1>TERRA EXPLORATION</h1>
+        <p>泰拉世界观档案 // ENCYCLOPEDIA OF TERRA</p>
+        <div style="width: 100px; height: 4px; background: var(--color-primary); margin: 30px auto;"></div>
+    </header>
+
+    <!-- Content -->
+    <main class="world-content">
+        
+        <!-- 1. Terra -->
+        <section class="detail-section">
+            <div class="detail-text">
+                <h2>01 // TERRA</h2>
+                <h3>泰拉大地</h3>
+                <br>
+                <p>我们所处的这片大地被称为“泰拉”。这里充满了未知与危险，各个种族在这片广袤的土地上繁衍生息，建立了不同的国家与势力。</p>
+                <p>然而，大地并不平静。天灾的威胁始终笼罩在泰拉之上，迫使人们不断迁徙，寻找安全的栖息之所。</p>
+            </div>
+            <div class="detail-visual visual-terra"></div>
+        </section>
+
+        <!-- 2. Originium -->
+        <section class="detail-section">
+            <div class="detail-text">
+                <h2>02 // ORIGINIUM</h2>
+                <h3>源石</h3>
+                <br>
+                <p>一种黑色的半透明结晶矿物。源石蕴含着巨大的能量，是推动泰拉工业文明发展的核心能源。通过源石技艺（Arts），人们可以施展出类似魔法的奇特能力。</p>
+                <p>但源石也是诅咒的根源。长期接触源石或被天灾波及，会导致被称为“矿石病”的不治之症。感染者虽然能获得更强的源石技艺，但最终会走向死亡，并成为新的感染源。</p>
+            </div>
+            <div class="detail-visual visual-originium"></div>
+        </section>
+
+        <!-- 3. Catastrophes -->
+        <section class="detail-section">
+            <div class="detail-text">
+                <h2>03 // CATASTROPHES</h2>
+                <h3>天灾</h3>
+                <br>
+                <p>泰拉世界频繁发生的各种自然灾害的统称。风暴、陨石、洪水等灾害中往往伴随着源石的出现。</p>
+                <p>天灾的破坏力极强，且具有不可预测性。为了在天灾中生存，人类发展出了移动城市技术，以便在灾难来临前进行躲避。</p>
+            </div>
+            <div class="detail-visual visual-catastrophe"></div>
+        </section>
+
+        <!-- 4. Nomadic Cities -->
+        <section class="detail-section">
+            <div class="detail-text">
+                <h2>04 // NOMADIC CITIES</h2>
+                <h3>移动城市</h3>
+                <br>
+                <p>建立在巨大可移动地基上的城市。通过无数板块的拼接，这些城市可以在荒野上航行，避开天灾的路径。</p>
+                <p>移动城市是泰拉文明的主要载体，拥有完善的工业、居住和防御系统。不同城邦之间既有贸易往来，也存在着复杂的政治博弈。</p>
+            </div>
+            <div class="detail-visual visual-cities">
+                <div class="city-block" style="height: 60px"></div>
+                <div class="city-block" style="height: 100px"></div>
+                <div class="city-block" style="height: 40px"></div>
+                <div class="city-block" style="height: 80px"></div>
+                <div class="city-block" style="height: 50px"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">RHODES ISLAND PHARMACEUTICAL INC.</div>
+            <div class="copyright">
+                <p>&copy; 2025 Arknights Fan Project. Not Official.</p>
+                <p>Material Design / Minimalist UI Experiment</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Simple animation for the city blocks
+        const blocks = document.querySelectorAll('.city-block');
+        setInterval(() => {
+            blocks.forEach(block => {
+                const randomHeight = Math.floor(Math.random() * 80) + 30;
+                block.style.height = randomHeight + 'px';
+            });
+        }, 2000);
+    </script>
+</body>
+</html>
